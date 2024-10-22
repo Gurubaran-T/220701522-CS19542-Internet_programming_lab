@@ -1,0 +1,132 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f7f9, #e6e9f0);
+    display: flex;
+}
+
+/* Main container for layout */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+/* Sidebar heading */
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Navigation items in the sidebar */
+.sidebar .nav-item {
+    padding: 10px;
+    color: #34495e;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav-item:hover {
+    background-color: #ecf0f1;
+}
+
+/* Main content area */
+.main {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+}
+
+/* Card styles for content display */
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header styles in cards */
+.card h3 {
+    margin-bottom: 15px;
+}
+
+/* Table styles for displaying results */
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-top: 20px; /* Space above the table */
+}
+
+/* Table cell styles */
+th, td {
+    padding: 12px; /* Padding inside table cells */
+    border: 1px solid #ddd; /* Light gray border for table cells */
+    text-align: left; /* Left align text in table cells */
+}
+
+/* Header cell styles */
+th {
+    background-color: #3498db; /* Blue background for header cells */
+    color: white; /* White text color for header cells */
+    font-weight: bold; /* Bold text */
+}
+
+/* Row styles for even rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #ddd; /* Darker gray on hover for rows */
+}
+
+/* Styles for error messages */
+p {
+    color: #d9534f; /* Red color for error messages */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-top: 20px; /* Space above error messages */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
