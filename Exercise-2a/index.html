@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Register Form</title>
+    </head>
+    <body>
+        <script>
+            function validateForm(){
+                var user_name = document.myforms.userName.value;
+                var email_id = document.myforms.emailID.value;
+                var gender_ = document.myforms.gender.value;
+                var phone_number = document.myforms.phoneNumber.value;
+                var address_ = document.myforms.address.value;
+                var pincode_ = document.myforms.pincode.value;
+                var password_ = document.myforms.password.value;
+                var confirm_password = document.myforms.confirmPassword.value;
+
+                if(user_name=="" || user_name==null){
+                    alert("User Name required");
+                    return false;
+                }
+                if(email_id=="" || email_id==null){
+                    alert("Email ID is required");
+                    return false;
+                }
+                if(gender_=="" || gender_==null){
+                    alert("Gender is required");
+                    return false;
+                }
+                if(phone_number=="" || phone_number==null || phone_number.length!=10){
+                    alert("Enter correct phone number");
+                    return false;
+                }
+                if(address_=="" || address_==null){
+                    alert("Address required");
+                    return false;
+                }
+                if(pincode_=="" || pincode_==null || pincode_.length!=6){
+                    alert("Enter correct pincode");
+                    return false;
+                }
+                if(password_.length<8 || password_.length>15){
+                    alert("Password should atleast have 8 characters and atmost 25 characters");
+                    return false;
+                }
+                if(password_!=confirm_password){
+                    alert("Password didn't match");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+    <body>
+        <h2 style="color: rgb(6, 129, 223);"><center>Registeration Form</center></h2>
+        <form name="myforms" onsubmit="return validateForm()" method="post"></form>
+        <b>User Name: </b><input type="text" name="userName" required><br>
+        <b>Email ID: </b><input type="email" name="emailID"><br>
+    
+        <b>Gender: </b>
+        <select name="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <b>Phone Number: </b><input type="text" name="phoneNumber"><br>
+        <b>Address: </b><input type="text area" name="address"><br>
+        <b>Pincode: </b><input type="text" name="pincode"><br>
+        <b>Password: </b><input type="password" name="password"><br>
+        <b>Confirm Password: </b><input type="text" name="confirmPassword"><br>
+        <input type="submit" value="submit">
+    </form>
+    </body>
+</html>

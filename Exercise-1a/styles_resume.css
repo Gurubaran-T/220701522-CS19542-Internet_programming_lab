@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2156ad;
+}
+
+h2 {
+    color: #2E6ACA;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #333;
+}
+
+h3.normal {
+    font-weight: normal;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+}
